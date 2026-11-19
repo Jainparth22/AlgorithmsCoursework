@@ -12,7 +12,7 @@ Best for: when stability matters, sorting linked lists (can be O(1) space),
           external sort (data doesn't fit in memory).
 """
 
-from typing import List
+from typing import List, Optional
 
 
 def merge_sort(arr: List[int]) -> List[int]:
@@ -38,7 +38,7 @@ def _merge(left: List[int], right: List[int]) -> List[int]:
     return result + left[i:] + right[j:]
 
 
-def merge_sort_inplace(arr: List[int], l: int = 0, r: int = None) -> None:
+def merge_sort_inplace(arr: List[int], l: int = 0, r: Optional[int] = None) -> None:
     """In-place merge sort (modifies arr)."""
     if r is None:
         r = len(arr) - 1

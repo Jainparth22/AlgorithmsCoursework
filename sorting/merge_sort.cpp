@@ -12,6 +12,7 @@
  */
 
 #include <bits/stdc++.h>
+#include <cassert>
 using namespace std;
 
 void merge(vector<int>& arr, int l, int m, int r) {
